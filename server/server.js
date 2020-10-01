@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-// IMPORTO EL ARCHIVO USUARIO CON LAS RUTAS
-app.use(require('./routes/usuario'));
+// IMPORTO EL ARCHIVO CENTRAL CON LAS RUTAS
+app.use(require('./routes/index'));
 
 mongoose.connect(process.env.URLDB, {
     useNewUrlParser: true,
