@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+let Schema = mongoose.Schema;
 
 
-var productoSchema = new Schema({
+let productoSchema = new Schema({
     nombre: {
         type: String,
         required: [true, 'El nombre es necesario']
@@ -28,6 +28,10 @@ var productoSchema = new Schema({
     usuario: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario'
+    },
+    img: {
+        type: String,
+        required: false
     }
 });
 

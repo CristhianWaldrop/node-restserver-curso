@@ -145,7 +145,7 @@ app.post('/producto', verificaToken, function(req, res) {
 app.put('/producto/:id', verificaToken, function(req, res) {
 
     let id = req.params.id;
-    let body = _.pick(req.body, ['nombre', 'precioUni', 'descripcion', 'categoria']);
+    let body = _.pick(req.body, ['nombre', 'precioUni', 'descripcion', 'categoria', 'img']);
 
     Producto.findByIdAndUpdate(id, body, { new: true, runValidators: true }, (err, productoDB) => {
 
